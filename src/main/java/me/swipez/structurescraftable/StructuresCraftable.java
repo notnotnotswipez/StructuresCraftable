@@ -33,11 +33,7 @@ public final class StructuresCraftable extends JavaPlugin {
             directory.mkdir();
         }
         exportAllResourceLocales();
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        getCommand("giveallstructures").setExecutor(new GiveAllStructuresCommand());
     }
 
     private void exportAllResourceLocales() {
